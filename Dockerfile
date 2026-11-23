@@ -32,13 +32,13 @@
 # dist/ with the agent jar and the controller .py, then `docker build .`
 # from the same directory.
 
-ARG UPSTREAM_IMAGE=ghcr.io/gnzsnz/ib-gateway:10.50.1g@sha256:75241053689af72fd68f92049f23984dda01a2a454b01100a4b5d5a1ba9b7690
+ARG UPSTREAM_IMAGE=ghcr.io/gnzsnz/ib-gateway:10.50.1h@sha256:4f2704a1ab2ebcd468ac6ca58e2b99d2c6c056b303a3f499b67fc80012ad5a10
 FROM ${UPSTREAM_IMAGE}
 
 # Re-declare post-FROM so they're in scope for the LABEL below (a build ARG
 # declared before FROM is only visible to the FROM instruction itself).
 ARG UPSTREAM_IMAGE
-ARG IB_GATEWAY_VERSION=10.50.1g
+ARG IB_GATEWAY_VERSION=10.50.1h
 
 # Self-describing image: record the bundled IB Gateway version and the exact
 # upstream base so `docker inspect` (and the GHCR page) report them without
